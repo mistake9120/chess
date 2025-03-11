@@ -7,6 +7,7 @@ const wss = new WebSocketServer.Server({ port: 8080 });
 const gameManager = new GameManager();
 
 
+
 wss.on('connection', function connection(ws) {
     ws.id = uuidv4();  // Assign a unique ID to the socket
     console.log(`User connected with ID: ${ws.id}`);
